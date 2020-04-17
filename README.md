@@ -17,7 +17,8 @@ Step 2) Transformation
 Step 3) Loading
 ETL tools
 Best practices ETL process
-Why do you need ETL?
+# Why do you need ETL?
+
 There are many reasons for adopting ETL in the organization:
 
 It helps companies to analyze their business data for taking critical business decisions.
@@ -33,12 +34,13 @@ ETL helps to Migrate data into a Data Warehouse. Convert to the various formats 
 ETL is a predefined process for accessing and manipulating source data into the target database.
 ETL offers deep historical context for the business.
 It helps to improve productivity because it codifies and reuses without a need for technical skills.
-ETL Process in Data Warehouses
+
+# ETL Process in Data Warehouses
 ETL is a 3-step process
 
+![Image of ETLExtract1](https://www.guru99.com/images/1/022218_0848_ETLExtractT1.png)
 
-
-Step 1) Extraction
+# Step 1) Extraction
 In this step, data is extracted from the source system into the staging area. Transformations if any are done in staging area so that performance of source system in not degraded. Also, if corrupted data is copied directly from the source into Data warehouse database, rollback will be a challenge. Staging area gives an opportunity to validate extracted data before it moves into the Data warehouse.
 
 Data warehouse needs to integrate systems that have different
@@ -61,14 +63,16 @@ Make sure that no spam/unwanted data loaded
 Data type check
 Remove all types of duplicate/fragmented data
 Check whether all the keys are in place or not
-Step 2) Transformation
+
+# Step 2) Transformation
+
 Data extracted from source server is raw and not usable in its original form. Therefore it needs to be cleansed, mapped and transformed. In fact, this is the key step where ETL process adds value and changes data such that insightful BI reports can be generated.
 
 In this step, you apply a set of functions on extracted data. Data that does not require any transformation is called as direct move or pass through data.
 
 In transformation step, you can perform customized operations on data. For instance, if the user wants sum-of-sales revenue which is not in the database. Or if the first name and the last name in a table is in different columns. It is possible to concatenate them before loading.
 
-
+![Image of ETLExtract2](https://www.guru99.com/images/1/022218_0848_ETLExtractT2.png)
 
 Following are Data Integrity Problems:
 
@@ -92,12 +96,14 @@ Split a column into multiples and merging multiple columns into a single column.
 Transposing rows and columns,
 Use lookups to merge data
 Using any complex data validation (e.g., if the first two columns in a row are empty then it automatically reject the row from processing)
-Step 3) Loading
+
+# Step 3) Loading
+
 Loading data into the target datawarehouse database is the last step of the ETL process. In a typical Data warehouse, huge volume of data needs to be loaded in a relatively short period (nights). Hence, load process should be optimized for performance.
 
 In case of load failure, recover mechanisms should be configured to restart from the point of failure without data integrity loss. Data Warehouse admins need to monitor, resume, cancel loads as per prevailing server performance.
 
-Types of Loading:
+# Types of Loading:
 
 Initial Load — populating all the Data Warehouse tables
 Incremental Load — applying ongoing changes as when needed periodically.
@@ -108,7 +114,9 @@ Test modeling views based on the target tables.
 Check that combined values and calculated measures.
 Data checks in dimension table as well as history table.
 Check the BI reports on the loaded fact and dimension table.
-ETL tools
+
+# ETL tools
+
 There are many Data Warehousing tools are available in the market. Here, are some most prominent one:
 
 1. MarkLogic:
@@ -148,7 +156,8 @@ To speed up query processing, have auxiliary views and indexes:
 
 To reduce storage costs, store summarized data into disk tapes. Also, the trade-off between the volume of data to be stored and its detailed usage is required. Trade-off at the level of granularity of data to decrease the storage costs.
 
-Summary:
+# Summary:
+
 ETLstands for Extract, Transform and Load.
 ETL provides a method of moving the data from various sources into a data warehouse.
 In the first step extraction, data is extracted from the source system into the staging area.
